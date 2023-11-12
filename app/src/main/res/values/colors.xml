@@ -2,9 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fadedwhite">#D5FFFFFF</color>
     <color name="darkgray">#0d0d0d</color>
 
     <color name="colorPrimary">#FFC801</color>
     <color name="red">#FF0101</color>
     <color name="darkblue">#0A03D3</color>
+    <color name="yellow">#E6FF03</color>
+    <color name="blue">#037DFF</color>
 </resources>

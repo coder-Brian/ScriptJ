@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signup_screen">
 
-
-    <!-- Email Input LogIn -->
+    <!-- Email Input Sign Up -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEmail_Signup"
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-
+        android:layout_marginTop="150dp"
         android:hint="Email Address"
+        app:boxBackgroundColor="@color/fadedwhite"
+        app:hintTextColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,17 +31,16 @@
             android:textColor="@android:color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <!-- Password Input LogIn -->
+    <!-- Password Input Sign Up -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtPass_SignUp"
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:hint="Password"
+        app:hintTextColor="@color/blue"
+        app:boxBackgroundColor="@color/fadedwhite"
         app:endIconMode="password_toggle"
-        app:endIconTint="@color/black"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail_Signup"
@@ -53,26 +54,29 @@
             android:textColor="@android:color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <!-- "Already have an account?" link -->
     <TextView
         android:id="@+id/txtDirLogInPage"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="Already have an account?"
-        android:textColor="@color/darkblue"
         android:clickable="true"
         android:onClick="onLogInPageClick"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass_SignUp"
+        android:text="Already have an account?"
+        android:textColor="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="@+id/txtPass_SignUp"
         app:layout_constraintStart_toStartOf="@+id/txtPass_SignUp"
-        app:layout_constraintEnd_toEndOf="@+id/txtPass_SignUp"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtPass_SignUp" />
 
-    <!-- Log In Button -->
-    <Button
+    <!-- Sign Up Button -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
-        android:layout_width="190dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/darkgray"
         android:text="SIGN UP"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDirLogInPage" />

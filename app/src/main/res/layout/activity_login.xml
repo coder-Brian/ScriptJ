@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_screen">
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="340dp"
         android:hint="Email Address"
+        app:hintTextColor="@color/blue"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +38,7 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:hint="Password"
+        app:hintTextColor="@color/blue"
         app:endIconMode="password_toggle"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,16 +71,17 @@
             android:id="@+id/txtDirSignUpPage"
             android:layout_width="0dp"
             android:layout_height="48dp"
+            android:layout_marginStart="0dp"
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="onSignUpPageClick"
             android:text="Don't have an account?"
-            android:textColor="@color/darkblue"
-            android:layout_marginStart="0dp"/>
+            android:textColor="@color/darkblue" />
 
 
         <!-- Forgot Password -->
         <TextView
+            android:id="@+id/txtForgotPassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginEnd="0dp"
@@ -91,13 +95,18 @@
 
 
     <!-- Log In Button -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogIn"
-        android:layout_width="190dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/darkgray"
         android:text="LOG IN"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
