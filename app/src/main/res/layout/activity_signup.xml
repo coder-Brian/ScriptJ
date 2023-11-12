@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signup_screen">
+
+
+    <!-- Email Input LogIn -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail_Signup"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+
+        android:hint="Email Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_email_su">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInput_Email_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Password Input LogIn -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPass_SignUp"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail_Signup"
+        app:startIconDrawable="@drawable/ic_pw_su">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInput_Pass_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- "Already have an account?" link -->
+    <TextView
+        android:id="@+id/txtDirLogInPage"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Already have an account?"
+        android:textColor="@color/darkblue"
+        android:clickable="true"
+        android:onClick="onLogInPageClick"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass_SignUp"
+        app:layout_constraintStart_toStartOf="@+id/txtPass_SignUp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPass_SignUp"/>
+
+    <!-- Log In Button -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDirLogInPage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

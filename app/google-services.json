@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "287900860107",
+    "project_id": "scriptj-4e793",
+    "storage_bucket": "scriptj-4e793.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287900860107:android:1e52c95d1832d7d179254e",
+        "android_client_info": {
+          "package_name": "com.mycompany.scriptj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqdAPOSNRA1OMHeXljcliQKdhq_QRYRAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
